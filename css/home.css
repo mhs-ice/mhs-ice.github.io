@@ -319,6 +319,7 @@ body{
     width: 100px;
     height: 100%;
     margin: 0;
+
 }
 .container .content .navbar .menu .icon i{
     font-size: 30px;
@@ -471,6 +472,7 @@ body{
 .overlay.active {
     display: block;
 }
+
 /* Recent Posts Styles */
 .recent-posts {
     margin-bottom: 30px;

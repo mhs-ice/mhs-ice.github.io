@@ -287,3 +287,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const recentPostsContainer = document.getElementById("recentPosts");
+
+    // Convert blogData object into an array and sort by date (newest first)
+    const postsArray = Object.entries(blogData).map(([id, post]) => ({
+        id,
+        ...post,
+        dateObj: new Date(post.date) // Convert date string to Date object for sorting
+    }));
+
+    // Sort by date (newest first)
+    postsArray.sort((a, b) => b.dateObj - a.dateObj);
+
+    // Get the 3 most recent posts
+    const recentPosts = postsArray.slice(0, 3);
+
+    // Display them in the sidebar
+    if (recentPosts.length > 0) {
+        recentPosts.forEach(post => {
+            const postElement = document.createElement("div");
+            postElement.className = "recent-post-item";
+            postElement.innerHTML = `
+                <div class="recent-post-title">${post.title}</div>
+                <div class="recent-post-date">${post.date}</div>
+            `;
+            
+            // Make the post clickable (redirect to blog.html with the post ID)
+            postElement.addEventListener("click", () => {
+                window.location.href = `blog.html?post=${post.id}`;
+            });
+            
+            recentPostsContainer.appendChild(postElement);
+        });
+    } else {
+        recentPostsContainer.innerHTML = "<p>No recent posts yet.</p>";
+    }
+});
