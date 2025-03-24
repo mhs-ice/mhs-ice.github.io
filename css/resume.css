@@ -1,13 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('5.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    height: 100vh; 
-    overflow-y: auto; 
 }
 .background{
     position: fixed;
@@ -15,6 +8,11 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('5.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    
 }
 .container{
     position: relative;
@@ -26,14 +24,6 @@ body{
     gap: 30px;
     padding-top: 50px;
 }
-
-.container .content{
-    width: 70vw;
-    min-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
 /* ==========================Side Profile============================ */
 
 .container .image{
@@ -41,11 +31,10 @@ body{
     max-width: 350px; 
     min-width: 250px; 
     max-height: 750px; 
-    /* height: auto; */
     background-color: white;
     box-shadow: 0 0 20px rgba(128, 128, 128, 0.7);
     overflow: hidden;
-    /* border-radius: 2px; */
+    border-radius: 2px;
 }
 .container .image .mehedi{
     width: 100%;
@@ -182,7 +171,7 @@ body{
 }
 
 .contact_icon:hover {
-    background-color: blueviolet;
+    background-color:blueviolet;
 }
 
 .contact_icon:hover i {
@@ -206,17 +195,16 @@ body{
 .contact .hire:hover{
     background-color: blueviolet;
 }
+
+.hire i {
+    font-size: 20px; 
+}
 .hire a{
     text-decoration: none;
     color: white;
 }
 
-.hire i {
-    font-size: 20px; 
-}
-
-
-.details{
+.details1{
     width: 90%;
     margin: auto;
     display: flex;
@@ -225,14 +213,20 @@ body{
     text-align: center;
 }
 
-.details h2{
+.details1 h2{
     color: #007bff;
     margin: 0;
 }
-
 /* ========================Side Profile End===================== */
 
-
+.container .content{
+    width: 70vw;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 400px;
+}
 
 
 /* =======================Navbar Start============================ */
@@ -267,39 +261,13 @@ body{
     color: black;
     text-decoration: none;
 }
-
-
-/*============== Hover Effect ================ */
-
-/* .navbar ul a::before,
-.navbar ul a::after{
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 0;
-    background-color: #8547c7;
-    transition: 0.5s;
-}
-.navbar ul a::after{
-    left: 0;
-    bottom: 10px;
-}
-.navbar ul a::before{
-    right: 0;
-    top: 12px;
-}
-.navbar ul a:hover::after, 
-.navbar ul a:hover::before{
-    width: 100%;
-} */
 .container .content .navbar>ul li a:hover{
+    /* background-color: #007bff; */
     color: #007bff;
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
-
-/* ==================== Hover Effect End ===================== */
 
 .container .content .navbar .menu{
     width: 37%;
@@ -350,6 +318,48 @@ body{
     color: white;
 }
 
+/* ================== Dropdown Start (Need to be worked) ===================== */
+/* 
+.dropdown-panel {
+    position: absolute;
+    width: 70%;
+    top: -200px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: top 0.4s ease-in-out;
+    display: flex; 
+    flex-direction: column;
+    z-index: 4000;
+}
+
+.dropdown-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.dropdown-panel ul li {
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-panel ul li:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+}
+
+.dropdown-panel.active {
+    top: 100;
+} 
 /* ===================== Navbar End ============================ */
 
 /* ===================== Menu ====================== */
@@ -460,64 +470,17 @@ body{
 .overlay {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0px;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     display: none;
+    transition: right 0.3s ease-in-out;
 }
 
 .overlay.active {
     display: block;
 }
-
-/* Recent Blog Posts Section */
-.recent-blogs {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.recent-blogs h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #007bff; /* Match the sidebar's blue color */
-    font-weight: bold;
-}
-
-.recent-blogs .blog-post {
-    margin-bottom: 15px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Light background for each post */
-    transition: background-color 0.3s ease;
-    border: 1px solid #ddd; /* Subtle border */
-}
-
-.recent-blogs .blog-post:hover {
-    background-color: #e9e9e9; /* Hover effect */
-}
-
-.recent-blogs .blog-post img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.recent-blogs .blog-post h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333; /* Dark text for titles */
-    font-weight: bold;
-}
-
-.recent-blogs .blog-post p {
-    font-size: 14px;
-    color: #666; /* Light text for descriptions */
-    margin-bottom: 0;
-}
-
 
 
 /* ======================== Right Sidebar End ======================== */
@@ -527,7 +490,7 @@ body{
 .left-sidebar {
     position: fixed;
     top: 0;
-    left: -700px; 
+    left: -300px; 
     width: 250px;
     height: 100%;
     background-color: white;
@@ -547,7 +510,7 @@ body{
     margin-bottom: 20px;
 }
 .left-sidebar.active {
-    left: 0;
+    left: 0
 }
 
 .left-close-btn {
@@ -592,8 +555,8 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    transition: left 0.4s ease-in-out;
     display: none;
+    transition: left 0.3s ease-out;
 }
 
 .left-overlay.active {
@@ -606,13 +569,7 @@ body{
 
 
 /* ====================== Body Start======================= */
-.body .info{
-    width: 90%;
-    margin: auto;
-    height: auto;
-    padding-top: 20px;
-    font-weight: bolder;
-}
+
 
 
 .container .content .body{
@@ -620,432 +577,93 @@ body{
     height: auto;
     background-color: white;
     box-shadow: 0 0 20px rgba(128, 128, 128, 0.7);
-    padding-bottom: 20px;
 }
 
-
-/* ========================= About Me Start =========================== */
-
-.about-me-grid {
-    width: 50px;
-    display: grid;
-    grid-template-columns: 50% 50% ;
-    gap: 30px; 
-    margin-top: 20px;
-    width: 100%;
-    box-sizing: border-box; 
+.two-column {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    background-color: transparent;
+    /* border: 2px solid red; */
 }
-.info h2{
+
+.column {
+    width: 48%;
+}
+.column h2{
     color: #007bff;
 }
-.left-column,
-.right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    box-sizing: border-box; 
-}
 
-.about-me-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%; 
-}
-
-.about-me-item .label {
-    font-size: 18px;
-    font-weight: bold;
-    color:#777; 
-}
-
-.about-me-item .content {
-    font-size: 16px;
-    color: #333; 
-    word-wrap: break-word; 
-}
-
-.about-me-item .content a {
-    color: black; 
-    text-decoration: none;
-    transition: color 0.3s ease; 
-}
-
-.about-me-item .content a:hover {
-    color: #0056b3; 
-    text-decoration: underline; 
-}
-
-.about-me-item .label i {
-    margin-right: 10px;
-    color:#2575fc; 
-    font-size: 18px; 
-}
-
-.about-me-item .content a {
-    color: #000; 
-    text-decoration: none; 
-    transition: color 0.3s ease; 
-}
-
-.about-me-item .content a:hover {
-    color: #0056b3; 
-    text-decoration: underline; 
-}
-
-/* ======================= About Me End ======================== */
-
-
-/* ========================== Bio Section Start ================= */
-.bio-section {
-    margin-top: 40px; 
-}
-
-.bio-section h3 {
-    font-size: 24px;
-    color: #007bff; 
-    margin-bottom: 15px; 
-}
-
-.bio-section p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify; 
-}
-
-
-
-/* ========================== What I Do Start? ======================= */
-.what-i-do-section {
-    margin-top: 60px; 
-}
-
-.what-i-do-section h2 {
-    font-size: 28px;
-    color: #007bff; 
-    margin-bottom: 30px; 
-    text-align: center; 
-}
-
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; 
-}
-
-
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card i {
-    font-size: 40px;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 22px;
-    color: #333;
+.institute, .company {
+    cursor: pointer;
     margin-bottom: 10px;
-}
-
-.card h4 {
-    font-size: 16px;
-    color: #777; 
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #555; 
-    line-height: 1.6;
-}
-
-
-.card:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-.separator{
-    width: 100%;
-    height: 2px;
-    background-color: #777;
-    margin: 50px auto;
-    opacity: 0.5;
-}
-
-/* ======================== What they say Start ======================== */
-.what-they-say-section {
-    margin-top: 60px; 
-    text-align: center; 
-}
-
-.what-they-say-section h2 {
-    font-size: 28px;
-    color: #007bff; 
-    margin-bottom: 30px; 
-}
-
-.review-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto;
-    overflow: hidden; 
-}
-
-
-.review {
-    display: none; 
-    align-items: center;
-    gap: 30px; 
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.review.active {
-    display: flex; 
-}
-
-
-.client-image {
-    width: 160px;
-    height: 180px;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: hidden;
+    background-color: #f9f9f9;
 }
 
-.client-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+.details {
+    max-height: 0; /* Start with no height */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.7s ease-out; /* Smooth transition */
+    margin-top: 10px;
 }
 
-
-.review-content {
-    flex: 1;
-    text-align: justify; 
-}
-
-.review-content p {
-    font-size: 16px;
-    color: #555; 
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.client-details h4 {
-    font-size: 18px;
-    color: #333; 
-    margin-bottom: 5px;
-}
-
-.client-details p {
-    font-size: 14px;
-    color: #777; 
-}
-
-.navigation-buttons {
-    margin-top: 20px; 
+.info-box {
     display: flex;
-    justify-content: center;
-    gap: 20px; 
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
 }
 
-.navigation-buttons button {
-    background-color: #007bff;
-    color: white;
+.box {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.active .details {
+    max-height: 600px;
+}
+
+.institute-image, .company-image {
+    width: 100%;
+    max-width: 400px; 
+    height: 200px; 
+    display: block; 
+    margin: 10px auto; 
+    border-radius: 5px; 
+    object-fit: cover;
+}
+
+/* Download CV Button Styling */
+.download-cv {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.download-cv button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
     border: none;
-    border-radius: 50%; 
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 20px;
+    box-sizing: border-box;
 }
 
-.navigation-buttons button:hover {
-    background-color: #0056b3;
+.download-cv button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
-
-
-
-/* ========================== Love to Play Section start ============================ */
-.love-to-section {
-    margin-top: 60px;
-}
-
-.love-to-section h2 {
-    font-size: 28px;
-    color: #007bff; 
-    margin-bottom: 30px;
-    text-align: center; 
-}
-
-
-.love-to-item {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px; 
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.love-to-item:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f8f9fa; 
-}
-
-
-.game-info {
-    flex: 1;
-}
-
-.game-header {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    margin-bottom: 15px; 
-}
-
-.game-header i {
-    font-size: 24px;
-    color: #007bff; 
-    transition: color 0.3s ease; 
-}
-
-.love-to-item:hover .game-header i {
-    color: #0056b3;
-}
-
-.game-header h3 {
-    font-size: 22px;
-    color: #333;
-    transition: color 0.3s ease; 
-}
-
-.love-to-item:hover .game-header h3 {
-    color: #007bff; 
-}
-
-.game-info p {
-    font-size: 16px;
-    color: #555; 
-    line-height: 1.6;
-    transition: color 0.3s ease; 
-}
-
-.love-to-item:hover .game-info p {
-    color: #333; 
-}
-
-
-.game-photo {
-    width: 200px; 
-    height: 150px; 
-    border-radius: 10px;
-    overflow: hidden; 
-    transition: transform 0.3s ease;
-}
-
-.game-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease; 
-}
-
-.love-to-item:hover .game-photo img {
-    transform: scale(1.1); 
-}
-
- /* ======================= Love to Play End ========================== */
-
-
-/* ========================== Love to Eat start =========================== */
-.love-to-eat-section {
-    margin-top: 60px;
-    text-align: center; 
-}
-
-.love-to-eat-section h2 {
-    font-size: 28px;
-    color: #007bff; 
-    margin-bottom: 30px; 
-}
-
-
-.food-card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
-}
-
-
-.food-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.food-card:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f8f9fa; 
-}
-
-.food-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden; 
-}
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease;
-}
-
-.food-card:hover .food-image img {
-    transform: scale(1.1);
-}
-
-
-.food-card h3 {
-    font-size: 22px;
-    color: #333;
-    margin: 20px 0 10px; 
-}
-
-.food-card p {
-    font-size: 16px;
-    color: #555; 
-    line-height: 1.6;
-    padding: 0 20px 20px; 
-}
-
-/* ========================= Love to Eat End ======================= */
 .footer {
     background-color:#a7a3a3; 
     color: white;
