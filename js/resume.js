@@ -76,6 +76,7 @@ searchForm.addEventListener("submit", function (event) {
 });
 
 
+
 function toggleDetails(element) {
     // Close all other details
     const allItems = document.querySelectorAll('.institute, .company');
@@ -88,6 +89,9 @@ function toggleDetails(element) {
     // Toggle the clicked item
     element.classList.toggle('active');
 }
+
+
+
 
 function downloadCV() {
 // Path to your CV file

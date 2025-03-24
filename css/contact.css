@@ -280,7 +280,7 @@ body{
     padding-right: 20px;
 }
 .container .content .navbar .menu .icon{
-    background-color:#0073e6;
+    background-color:transparent;
     width: 100px;
     height: 100%;
 }

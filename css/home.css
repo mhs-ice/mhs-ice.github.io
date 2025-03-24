@@ -315,9 +315,10 @@ body{
     padding-right: 20px;
 }
 .container .content .navbar .menu .icon{
-    background-color:#0073e6;
+    background-color:transparent;
     width: 100px;
     height: 100%;
+    margin: 0;
 }
 .container .content .navbar .menu .icon i{
     font-size: 30px;
@@ -470,54 +471,44 @@ body{
 .overlay.active {
     display: block;
 }
+/* Recent Posts Styles */
+.recent-posts {
+    margin-bottom: 30px;
+}
 
-/* Recent Blog Posts Section */
-.recent-blogs {
-    margin-top: 20px;
+.recent-posts h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.recent-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recent-post-item {
     padding: 10px;
-}
-
-.recent-blogs h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #007bff; /* Match the sidebar's blue color */
-    font-weight: bold;
-}
-
-.recent-blogs .blog-post {
-    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Light background for each post */
-    transition: background-color 0.3s ease;
-    border: 1px solid #ddd; /* Subtle border */
+    transition: all 0.3s ease;
 }
 
-.recent-blogs .blog-post:hover {
-    background-color: #e9e9e9; /* Hover effect */
+.recent-post-item:hover {
+    background-color: #f5f5f5;
 }
 
-.recent-blogs .blog-post img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.recent-blogs .blog-post h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333; /* Dark text for titles */
+.recent-post-title {
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-.recent-blogs .blog-post p {
-    font-size: 14px;
-    color: #666; /* Light text for descriptions */
-    margin-bottom: 0;
+.recent-post-date {
+    font-size: 12px;
+    color: #777;
 }
-
 
 
 /* ======================== Right Sidebar End ======================== */
