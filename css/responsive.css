@@ -9,7 +9,7 @@
         width: 90%;
         max-width: 100%;
         max-height: 750px; 
-        min-height: 950px;
+        min-height: 1080px;
     }
 
 
@@ -148,7 +148,7 @@
         width: 90%;
         max-width: 100%;
         max-height: 750px; 
-        min-height: 650px; /*Change it when needed*/
+        min-height: 900px; /*Change it when needed*/
     }
 
 
@@ -226,6 +226,7 @@
         width: 90%;
         max-width: 100%;
         height: 100%;
+        min-height: 800px;
         /* border: 2px solid black; */
     }
 

@@ -210,12 +210,21 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
 }
+.details1 p{
+    font-size: 15px;
+}
+
+.details1 i{
+    padding-right: 10px;
+}
+
 
 .details1 h2{
     color: #007bff;
     margin: 0;
+    text-align: center;
 }
 /* ========================Side Profile End===================== */
 
