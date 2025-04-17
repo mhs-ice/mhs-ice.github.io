@@ -9,6 +9,7 @@ body{
     height: 100vh; 
     overflow-y: auto; 
 }
+
 .background{
     position: fixed;
     top: 0;
