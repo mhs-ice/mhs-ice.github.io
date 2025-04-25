@@ -2,6 +2,7 @@
 2. git remote add origin https://github.com/mhs-ice/MyRepo.git
 3. git add .
 4. git commit -m "Initial"
+
 If it is the initial commit then 
 5. git branch -M main
 6. git push -u origin main

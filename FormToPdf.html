@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Order Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+        .col {
+            flex: 1;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .pdf-btn {
+            background-color: #27ae60;
+        }
+        .pdf-btn:hover {
+            background-color: #219653;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .order-summary {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+            background-color: #f9f9f9;
+        }
+        .order-summary h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="form-to-pdf">
+        <h1>E-Commerce Order Form</h1>
+        
+        <form id="orderForm">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="address" class="required">Shipping Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="city" class="required">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="state" class="required">State/Province</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="zip" class="required">ZIP/Postal Code</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country" class="required">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <option value="IN">India</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Details</h3>
+                
+                <div class="form-group">
+                    <label for="product" class="required">Product</label>
+                    <select id="product" name="product" required>
+                        <option value="">Select Product</option>
+                        <option value="product1">Premium Smartphone - $999</option>
+                        <option value="product2">Wireless Headphones - $199</option>
+                        <option value="product3">Smart Watch - $299</option>
+                        <option value="product4">Laptop - $1299</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity" class="required">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="color">Color Preference</label>
+                    <select id="color" name="color">
+                        <option value="">Select Color</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="delivery" class="required">Delivery Method</label>
+                    <select id="delivery" name="delivery" required>
+                        <option value="">Select Delivery</option>
+                        <option value="standard">Standard Shipping (5-7 days) - Free</option>
+                        <option value="express">Express Shipping (2-3 days) - $9.99</option>
+                        <option value="overnight">Overnight Shipping - $19.99</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Special Instructions</label>
+                    <textarea id="notes" name="notes" placeholder="Any special requests or instructions..."></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="payment" class="required">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Select Payment</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank">Bank Transfer</option>
+                </select>
+            </div>
+            
+            <button type="submit">Submit Order</button>
+            <button type="button" class="pdf-btn" id="generatePdf">Download Order as PDF</button>
+        </form>
+    </div>
+
+    <script>
+        // Initialize jsPDF
+        const { jsPDF } = window.jspdf;
+        
+        document.getElementById('generatePdf').addEventListener('click', generatePdf);
+        
+        function generatePdf() {
+            // Get the form element
+            const element = document.getElementById('form-to-pdf');
+            
+            // Use html2canvas to capture the form as an image
+            html2canvas(element).then(canvas => {
+                // Calculate the PDF dimensions
+                const imgData = canvas.toDataURL('image/png');
+                const pdfWidth = element.offsetWidth / 2;
+                const pdfHeight = (element.offsetHeight / element.offsetWidth) * pdfWidth;
+                
+                // Create a new PDF
+                const pdf = new jsPDF('p', 'pt', [pdfWidth, pdfHeight]);
+                
+                // Add the image to the PDF
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                
+                // Download the PDF
+                pdf.save('order-form.pdf');
+            });
+        }
+        
+        // Form submission handler
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order submitted successfully! You can now download the PDF of your order.');
+        });
+    </script>
+</body>
+</html>
