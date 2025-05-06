@@ -184,6 +184,22 @@ Promote your shop with bold designs that attract customers and drive foot traffi
                 </p>
                 <a href="https://example.com" class="project-link" target="_blank">View Project</a>
             </div>
+            <div class="project">
+                <h3 class="project-title">Workshop Flyer</h3>
+                <img src="Collection/Flyer/Workshop FLyer.png" alt="" class="project-image">
+                <p class="project-description">
+                    Engaging and informative flyers designed to boost workshop attendance. Whether it’s a corporate training, creative masterclass, or community event, these flyers highlight key details (date, speaker, benefits) with clear visuals and persuasive copy to drive registrations.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Party Invitation Flyer</h3>
+                <img src="Collection/Flyer/Party Invitation.png" alt="" class="project-image">
+                <p class="project-description">
+                    Bring the celebration to life before it even begins! My eye-catching party flyers create buzz and excitement for any event - from birthday bashes to corporate mixers. These designs combine playful typography, energetic color schemes, and irresistible visuals to guarantee your guests RSVP "yes!"
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
             <div class="comment">
                 <h2>There are many others design. A lot of designs has not been added here. More contents will be added later.</h2>
             </div>
