@@ -128,52 +128,93 @@ function loadDetails(category) {
 
     // Dynamic content based on the category
     switch (category) {
-        case "web-development":
+        case "flyer-design":
             content = `
-        <h2 class="details-title">Web Development</h2>
+        <h2 class="details-title">Flyer Design</h2>
         <p class="details-description">
-            I specialize in building responsive and user-friendly websites using modern technologies like HTML, CSS, JavaScript, and React. Here are some of my recent projects:
+            Eye-catching and effective flyer designs tailored to your brand’s message. From bold visuals to clean layouts, I create promotional materials that grab attention and communicate your event, product, or service with impact. Perfect for print and digital distribution.
         </p>
         <div class="project-showcase">
             <div class="project">
-                <h3 class="project-title">E-Commerce Website</h3>
-                <img src="ecommerce.jpg" alt="E-Commerce Website" class="project-image">
+                <h3 class="project-title">Shop Advertisement Flyer</h3>
+                <img src="Collection/Flyer/Shop Advertisement flyer.png" alt="Shop Advertisement flyer" class="project-image">
                 <p class="project-description">
-                    A fully functional e-commerce website built with React and Node.js. Features include product search, cart management, and payment integration.
+                    <b>"Boost Your Sales with Eye-Catching Flyers!"</b>
+Promote your shop with bold designs that attract customers and drive foot traffic.
                 </p>
                 <a href="https://example.com" class="project-link" target="_blank">View Project</a>
             </div>
             <div class="project">
-                <h3 class="project-title">Portfolio Website</h3>
-                <img src="portfolio.jpg" alt="Portfolio Website" class="project-image">
+                <h3 class="project-title">Home Sale Flyer</h3>
+                <img src="Collection/Flyer/elegant home for sale (Flyer).png" alt="" class="project-image">
                 <p class="project-description">
-                    A personal portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript.
+                    A sleek, high-impact real estate flyer designed to showcase properties with clarity and appeal. Combines striking visuals, organized layouts, and persuasive copy to attract potential buyers and highlight key features.
                 </p>
                 <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">CCTV Service Flyer</h3>
+                <img src="Collection/Flyer/Untitled Design.png" alt="" class="project-image">
+                <p class="project-description">
+                    Eye-catching promotional flyers for surveillance and security services. Designed to communicate reliability, technology, and peace of mind through bold visuals, structured layouts, and clear call-to-actions. Ideal for security companies looking to attract residential or commercial clients.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Medical Service Flyer</h3>
+                <img src="Collection/Flyer/Medical FLyer.png" alt="" class="project-image">
+                <p class="project-description">
+                    Professional, trustworthy flyers designed for healthcare providers, clinics, and medical campaigns. Clean layouts with a balance of warmth and authority ensure critical information (services, specialists, or health tips) is communicated clearly while maintaining patient comfort.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Conference Flyer</h3>
+                <img src="Collection/Flyer/Conference FLyer.png" alt="" class="project-image">
+                <p class="project-description">
+                    High-impact flyers that turn events into must-attend occasions. Designed to communicate key details (speakers, agenda, venue) with bold typography, dynamic layouts, and strategic visuals that reflect the conference’s professionalism or creativity.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Nail Service Flyer</h3>
+                <img src="Collection/Flyer/Nail Service FLyer.png" alt="" class="project-image">
+                <p class="project-description">
+                    Vibrant, stylish flyers designed to showcase nail artistry and salon promotions. Combines bold colors, elegant typography, and high-quality imagery to highlight services (manicures, pedicures, nail art) and drive bookings.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="comment">
+                <h2>There are many others design. A lot of designs has not been added here. More contents will be added later.</h2>
             </div>
         </div>
         <div class="skills-used">
             <h3 class="skills-title">Skills Used</h3>
             <ul class="skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Canva</li>
+                <li>InDesign</li>
             </ul>
         </div>
         <div class="testimonials">
             <h3 class="testimonials-title">Testimonials</h3>
             <div class="testimonial">
                 <p class="testimonial-text">
-                    "Mehedi delivered an outstanding e-commerce website that exceeded our expectations. Highly recommended!"
+                    "The flyer designs exceeded our expectations! They perfectly captured our brand’s vibe and drove real customer engagement. Highly recommend!"
                 </p>
                 <p class="testimonial-author">- John Doe, Client</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Working with Mehedi was seamless. The attention to detail and creative concepts made our promotion stand out. Will definitely collaborate again!"
+                </p>
+                <p class="testimonial-author">- Mike T., Small Business Owner</p>
             </div>
         </div>
         <div class="cta">
             <p class="cta-text">Interested in working together? Let's connect!</p>
-            <a href="contact.html" class="cta-button">Contact Me</a>
+            <a href="https://www.freelancer.com/u/mhs547061?sb=t" target="_blank" class="cta-button">Contact Me</a>
         </div>
     `;
             break;
@@ -251,7 +292,7 @@ portfolioItems2.forEach((item) => {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const recentPostsContainer = document.getElementById("recentPosts");
 
     // Convert blogData object into an array and sort by date (newest first)
@@ -276,12 +317,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="recent-post-title">${post.title}</div>
                 <div class="recent-post-date">${post.date}</div>
             `;
-            
+
             // Make the post clickable (redirect to blog.html with the post ID)
             postElement.addEventListener("click", () => {
                 window.location.href = `blog.html?post=${post.id}`;
             });
-            
+
             recentPostsContainer.appendChild(postElement);
         });
     } else {
