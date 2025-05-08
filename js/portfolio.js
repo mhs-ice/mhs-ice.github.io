@@ -128,6 +128,7 @@ function loadDetails(category) {
 
     // Dynamic content based on the category
     switch (category) {
+// ----------------------------Flyer Design--------------------------
         case "flyer-design":
             content = `
         <h2 class="details-title">Flyer Design</h2>
@@ -235,41 +236,255 @@ Promote your shop with bold designs that attract customers and drive foot traffi
     `;
             break;
 
-        case "graphics-design":
+
+// ----------------------------Social Media Post------------------
+        case "social-media-post":
             content = `
-        <h2 class="details-title">Graphics Design</h2>
+        <h2 class="details-title">Social Media Post</h2>
         <p class="details-description">
-            I create visually stunning designs for branding, marketing, and social media. Here are some of my recent works:
+            I create visually stunning designs for branding, marketing materials for social media. Here are some of my recent works:
         </p>
         <div class="project-showcase">
             <div class="project">
-                <h3 class="project-title">Logo Design</h3>
-                <img src="logo-design.jpg" alt="Logo Design" class="project-image">
+                <h3 class="project-title">Coffee Shop Insta Post</h3>
+                <img src="Collection/Insta Post/Coffee Shop Instagram Post.jpg" alt="Insta Post" class="project-image">
                 <p class="project-description">
-                    A modern and minimalist logo design for a tech startup.
+                    A modern and minimalist Instagram Post for a Coffee Shop.
                 </p>
                 <a href="https://example.com" class="project-link" target="_blank">View Project</a>
             </div>
             <div class="project">
-                <h3 class="project-title">Social Media Banner</h3>
-                <img src="social-media.jpg" alt="Social Media Banner" class="project-image">
+                <h3 class="project-title">Football Match Banner</h3>
+                <img src="Collection/Insta Post/Football Match.png" alt="Football Match Banner" class="project-image">
                 <p class="project-description">
-                    A vibrant and engaging social media banner for a fitness brand.
+                    A vibrant and engaging Football Match Banner for a Football Tournament.
                 </p>
                 <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Marketing Poster</h3>
+                <img src="Collection/Insta Post/Untitled Design.png" alt="Football Match Banner" class="project-image">
+                <p class="project-description">
+                    Designed high-impact marketing collateral—brochures, flyers, social media graphics, and ad campaigns—that captivate audiences and amplify brand messaging.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Boxing Match</h3>
+                <img src="Collection/Insta Post/Instagram Post.png" alt="Boxing Match Poster" class="project-image">
+                <p class="project-description">
+                    Designed a high-impact fight night poster to hype Middleweight Fights, blending bold typography, dynamic imagery, and gritty textures to capture the raw intensity of the ring. Strategically highlighted headliners, ticket details, and sponsors to drive buzz and sell-out crowds
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Medical Service</h3>
+                <img src="Collection/Insta Post/Medical Service Instagram Post.png" alt="Marketing Poster" class="project-image">
+                <p class="project-description">
+                    Created an informative and visually engaging poster to promote Free Allergy Testing. Balanced clarity and empathy with clean layouts, accessible typography, and soothing color palettes to communicate critical healthcare information effectively. 
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+        </div>
+
+        
+            <div class="comment">
+                <h2>There are many others design. A lot of designs has not been added here. More contents will be added later.</h2>
             </div>
         </div>
         <div class="skills-used">
             <h3 class="skills-title">Skills Used</h3>
             <ul class="skills-list">
-                <li>Adobe Photoshop</li>
-                <li>Adobe Illustrator</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
                 <li>Canva</li>
+                <li>InDesign</li>
             </ul>
+        </div>
+        <div class="testimonials">
+            <h3 class="testimonials-title">Testimonials</h3>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "The flyer designs exceeded our expectations! They perfectly captured our brand’s vibe and drove real customer engagement. Highly recommend!"
+                </p>
+                <p class="testimonial-author">- John Doe, Client</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Working with Mehedi was seamless. The attention to detail and creative concepts made our promotion stand out. Will definitely collaborate again!"
+                </p>
+                <p class="testimonial-author">- Mike T., Small Business Owner</p>
+            </div>
         </div>
         <div class="cta">
             <p class="cta-text">Interested in working together? Let's connect!</p>
-            <a href="contact.html" class="cta-button">Contact Me</a>
+            <a href="https://www.freelancer.com/u/mhs547061?sb=t" target="_blank" class="cta-button">Contact Me</a>
+        </div>
+    `;
+            break;
+
+
+// -----------------------Poster Design------------------------------
+        case "poster":
+            content = `
+        <h2 class="details-title">Poster Design</h2>
+        <p class="details-description">
+            Eye-catching, purposeful poster designs that command attention and communicate messages with impact. Whether for events, promotions, or awareness campaigns, each poster is crafted with striking visuals, balanced typography, and strategic layouts to engage audiences and drive action.
+        </p>
+        <div class="project-showcase">
+            <div class="project">
+                <h3 class="project-title">Sales Poster</h3>
+                <img src="Collection/Poster/Untitled Design.png" alt="Sales Poster" class="project-image">
+                <p class="project-description">
+                    High-converting sales posters designed to stop scrolling and spark action. Combines persuasive copy, bold visuals, and strategic layouts to highlight promotions, discounts, and product benefits—driving urgency and boosting sales.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Travel Poster</h3>
+                <img src="Collection/Poster/Travel Poster.jpg" alt="Travel Poster" class="project-image">
+                <p class="project-description">
+                    Wanderlust-inspiring posters that transport viewers to breathtaking destinations. Combining vibrant visuals, evocative typography, and a sense of adventure, each design captures the essence of a location—turning dream trips into booked itineraries.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Marketing Poster</h3>
+                <img src="Collection/Poster/Marketing Poster.png" alt="Football Match Banner" class="project-image">
+                <p class="project-description">
+                    Designed high-impact marketing collateral—brochures, flyers, social media graphics, and ad campaigns—that captivate audiences and amplify brand messaging.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Boxing Match</h3>
+                <img src="Collection/Insta Post/Instagram Post.png" alt="Boxing Match Poster" class="project-image">
+                <p class="project-description">
+                    Designed a high-impact fight night poster to hype Middleweight Fights, blending bold typography, dynamic imagery, and gritty textures to capture the raw intensity of the ring. Strategically highlighted headliners, ticket details, and sponsors to drive buzz and sell-out crowds
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Meeting Poster</h3>
+                <img src="Collection/Poster/Meeting Poster.png" alt="Meeting Poster" class="project-image">
+                <p class="project-description">
+                    Professionally crafted posters that transform corporate gatherings into must-attend events. Combining clear information hierarchy with engaging visuals, these designs boost registration while maintaining brand integrity.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+        </div>
+
+        
+            <div class="comment">
+                <h2>There are many others design. A lot of designs has not been added here. More contents will be added later.</h2>
+            </div>
+        </div>
+        <div class="skills-used">
+            <h3 class="skills-title">Skills Used</h3>
+            <ul class="skills-list">
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Canva</li>
+                <li>InDesign</li>
+            </ul>
+        </div>
+        <div class="testimonials">
+            <h3 class="testimonials-title">Testimonials</h3>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "The flyer designs exceeded our expectations! They perfectly captured our brand’s vibe and drove real customer engagement. Highly recommend!"
+                </p>
+                <p class="testimonial-author">- John Doe, Client</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Working with Mehedi was seamless. The attention to detail and creative concepts made our promotion stand out. Will definitely collaborate again!"
+                </p>
+                <p class="testimonial-author">- Mike T., Small Business Owner</p>
+            </div>
+        </div>
+        <div class="cta">
+            <p class="cta-text">Interested in working together? Let's connect!</p>
+            <a href="https://www.freelancer.com/u/mhs547061?sb=t" target="_blank" class="cta-button">Contact Me</a>
+        </div>
+    `;
+            break;
+
+// ------------------------------Banner Design-----------------------
+        case "banner":
+            content = `
+        <h2 class="details-title">Banner Design</h2>
+        <p class="details-description">
+           High-impact banners that grab attention and drive action—whether for digital ads, trade shows, or retail promotions. Designed for maximum visibility, brand consistency, and conversion, blending bold visuals with clear messaging.
+        </p>
+        <div class="project-showcase">
+            <div class="project">
+                <h3 class="project-title">Travel Banner</h3>
+                <img src="Collection/Banner/travel banner.png" alt="Travel Banner" class="project-image">
+                <p class="project-description">
+                   Stunning travel banners that spark wanderlust and inspire bookings. Designed for airlines, hotels, and tourism brands, these visuals combine breathtaking destinations with irresistible offers—turning viewers into travelers.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Restaurant Banner</h3>
+                <img src="Collection/Banner/restaurant banner.png" alt="Restaurant Banner" class="project-image">
+                <p class="project-description">
+                   Appetizing banners that make customers stop scrolling and start dining—perfect for promotions, events, or grand openings. Combining mouthwatering food photography with bold offers to drive foot traffic and online orders.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Silver Jubilee Banner</h3>
+                <img src="Collection/Banner/Silver Jubilee.png" alt="Silver Jubilee Banner" class="project-image">
+                <p class="project-description">
+                    Created a Silver Jubilee Banner of our Department ICE of University of Rajshahi.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">About Me Banner</h3>
+                <img src="Collection/Banner/About Me Banner.png" alt="About Me Banner" class="project-image">
+                <p class="project-description">
+                    A personal and professional introduction that captures your unique story—perfect for LinkedIn, portfolios, or speaker profiles. Blends authenticity with strategic branding to make a memorable first impression.
+                </p>
+                <a href="https://example.com" class="project-link" target="_blank">View Project</a>
+            </div>
+           
+        </div>
+
+        
+            <div class="comment">
+                <h2>There are many others design. A lot of designs has not been added here. More contents will be added later.</h2>
+            </div>
+        </div>
+        <div class="skills-used">
+            <h3 class="skills-title">Skills Used</h3>
+            <ul class="skills-list">
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Canva</li>
+                <li>InDesign</li>
+            </ul>
+        </div>
+        <div class="testimonials">
+            <h3 class="testimonials-title">Testimonials</h3>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "The flyer designs exceeded our expectations! They perfectly captured our brand’s vibe and drove real customer engagement. Highly recommend!"
+                </p>
+                <p class="testimonial-author">- John Doe, Client</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Working with Mehedi was seamless. The attention to detail and creative concepts made our promotion stand out. Will definitely collaborate again!"
+                </p>
+                <p class="testimonial-author">- Mike T., Small Business Owner</p>
+            </div>
+        </div>
+        <div class="cta">
+            <p class="cta-text">Interested in working together? Let's connect!</p>
+            <a href="https://www.freelancer.com/u/mhs547061?sb=t" target="_blank" class="cta-button">Contact Me</a>
         </div>
     `;
             break;
