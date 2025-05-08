@@ -489,6 +489,79 @@ Promote your shop with bold designs that attract customers and drive foot traffi
     `;
             break;
 
+
+// ---------------------------------PDF Design------------------------------
+
+case "pdf-design":
+    content = `
+        <h2 class="details-title">PDF Design</h2>
+        <p class="details-description">
+            Professionally crafted PDFs for reports, brochures, and presentations—optimized for digital and print. Clean layouts, engaging visuals, and seamless navigation.
+        </p>
+        <div class="project-showcase">
+            <!-- Project 1 -->
+            <div class="project">
+                <h3 class="project-title">Peace Pointer</h3>
+                <img src="Collection/PDF/Peace Pointer.png" alt="Peace Pointer" class="project-image">
+                <p class="project-description">
+                    A peace pointer article with data visualizations, branded themes, and print-ready formatting.
+                </p>
+                <a href="Collection/PDF/PEACE POINTERS.pdf" class="project-link" target="_blank">View PDF</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <h3 class="project-title">Article Report</h3>
+                <img src="Collection/PDF/Report Thumb.png" alt="Article Report PDF" class="project-image">
+                <p class="project-description">
+                    A sleek report pdf with high-res images, interactive links, and mobile-friendly design.
+                </p>
+                <a href="Collection/PDF/LM-024.pdf" class="project-link" target="_blank">View PDF</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <h3 class="project-title">Printable & Fillable PDF</h3>
+                <img src="Collection/PDF/Form PDF.png" alt="Form PDF" class="project-image">
+                <p class="project-description">
+                    A printable and Fillable PDF design with checkable box,textbox and buttons.
+                </p>
+                <a href="Collection/PDF/Main.pdf" class="project-link" target="_blank">View PDF</a>
+            </div>
+        </div>
+
+        <div class="comment">
+            <h2>More PDF designs (eBooks, resumes, flyers) will be added soon.</h2>
+        </div>
+
+        <div class="skills-used">
+            <h3 class="skills-title">Skills Used</h3>
+            <ul class="skills-list">
+                <li>Adobe InDesign (Master Pages)</li>
+                <li>Illustrator (Vector Graphics)</li>
+                <li>Acrobat (Hyperlinks, Forms)</li>
+                <li>Photoshop (Image Retouching)</li>
+            </ul>
+        </div>
+
+        <div class="testimonials">
+            <h3 class="testimonials-title">Testimonials</h3>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "The PDF brochure was flawless—clients loved the interactive elements and print quality!"
+                </p>
+                <p class="testimonial-author">- Jane R., Marketing Director</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <p class="cta-text">Need a custom PDF? Let’s create something amazing!</p>
+            <a href="https://www.freelancer.com/u/mhs547061?sb=t" target="_blank" class="cta-button">Contact Me</a>
+        </div>
+    `;
+    break;
+
+
         // Add more cases for other categories as needed
         default:
             content = `<h2 class="details-title">No Details Available</h2>`;
